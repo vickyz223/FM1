@@ -1,7 +1,5 @@
 const emailInput = document.querySelector(".sign-up__email-input");
 const emailForm = document.querySelector(".sign-up__email-form");
-const successForm = document.querySelector("#success-card"); 
-const dismissButton = document.querySelector("#dismiss-button"); 
 
 const handleEmailSubmit = (event) => {
   event.preventDefault();
@@ -17,11 +15,5 @@ const handleEmailSubmit = (event) => {
     window.location = "success.html";
   }
 };
-
-dismissButton.addEventListener("click", () => {
-    successForm.classList.add("not-visible")
-})
-
-
 
 emailForm.addEventListener("submit", handleEmailSubmit);

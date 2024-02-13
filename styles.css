@@ -1,0 +1,162 @@
+/* common classes */
+:root {
+  --primary: hsl(4, 100%, 67%);
+  --neutral-gray-900: hsl(234, 29%, 20%);
+  --neutral-gray-700: hsl(235, 18%, 26%);
+  --neutral-gray-500: hsl(231, 7%, 60%);
+  --neutral-gray-200: hsl(0, 0%, 100%);
+
+  --font-body: "Roboto", sans-serif;
+
+  --desktop-width: 1440px;
+  --mobile-width: 375px;
+}
+
+.no-spacing {
+  margin: 0;
+  padding: 0;
+}
+
+.not-visible {
+    display: none !important; 
+}
+
+.wide-button {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 1rem;
+  margin: 1rem 0;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: var(--neutral-gray-200);
+
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--neutral-gray-900);
+}
+
+.card {
+  font-family: "Roboto", sans-serif;
+  color: var(--neutral-gray-900);
+  background-color: white;
+
+  height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* sign-up classes */
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sign-up__image {
+  max-height: 30vh;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0 0rem 1rem 1rem;
+}
+
+.sign-up__info-card {
+  font-family: var(--font-body);
+  color: var(--neutral-gray-700);
+  margin: 1.3rem;
+}
+
+/* here - for custom spaced bullet points */
+.sign-up__benefits-list::before {
+  content: url("assets/images/icon-list.svg");
+
+  margin-right: 0.8rem;
+  padding-top: 0.5rem;
+}
+
+.sign-up__benefits-list {
+  justify-content: center;
+}
+
+.sign-up__email-form {
+  padding-top: 1.5rem;
+}
+
+.sign-up__email {
+  font-size: 12px;
+  font-weight: 700;
+  padding-bottom: 12px;
+}
+
+.sign-up__email-input {
+  padding: 1rem;
+  width: 100%;
+  /* here - for 100% width including padding */
+  box-sizing: border-box;
+
+  border-radius: 0.5rem;
+  border: 1px solid hsl(231, 7%, 60%);
+
+  font-family: "Roboto", sans-serif;
+}
+
+.sign-up__email-input--error {
+    background-color: hsl(5, 50%, 80%);
+    border: 1px solid var(--primary); 
+}
+.sign-up__email-input--error:focus {
+    background-color: hsl(5, 50%, 80%);
+    border: 1px solid var(--primary); 
+    outline: none; 
+}
+
+/* success classes */
+.success {
+  justify-content: flex-end;
+  gap: 20vh;
+  margin: 1.5rem; 
+  margin-bottom: 1rem; 
+}
+
+input:focus {
+  border: 2px solid hsl(235, 18%, 26%);
+  /* here - getting rid of outline on click */
+  outline: none;
+}
+
+@media (min-width: 768px) {
+    .container {
+        height: 100vh; 
+        background-color: var(--neutral-gray-700);
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+    }
+
+    .card {
+        height: auto; 
+        padding: 2rem; 
+        gap: 1rem; 
+         margin: 0 1.5rem;
+
+        border-radius: 1rem; 
+        background-color: white;
+    }
+
+    .success {
+        width: 350px; 
+    }
+
+    .sign-up {
+        width: 760px; 
+        flex-direction: row-reverse;
+    }
+
+    .sign-up__image { 
+        max-height: 100%;
+        max-width: 45%; 
+        border-radius: 1rem; 
+    }
+}
